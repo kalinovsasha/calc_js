@@ -1,0 +1,45 @@
+*{ box-sizing: border-box;}
+
+.main{
+margin: 70px auto;
+width: 306px;
+height: 306px;
+background-color: aquamarine;
+}
+.f{display: flex;}
+.button{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 2px;
+    width: 100px;
+    height: 100px;
+    margin-left: 2px;
+    background-color: rgb(35, 245, 245);
+    text-align: center;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    outline: 2px solid rgb(241, 156, 156);
+    transition: 0.2s;
+}
+.button:hover{
+    background-color: rgb(17, 50, 243);
+    transition: .3s;
+   
+}
+.button:active{
+    background-color: rgb(161, 25, 150);
+    
+}
+p{
+    cursor: pointer;
+    -webkit-user-select: none;
+}
+
+.main_input{
+    width: 308px;
+    height: 50px;
+    font-size: 36px;
+    color: rgb(0, 0, 0);
+}

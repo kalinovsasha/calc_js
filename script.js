@@ -71,10 +71,15 @@ numbers[16].addEventListener('click', ()=>{ent.value="";oper="";buf=0;});
             oper="+";
             ent.value=" "; 
             break;
-        default:
+         case "+":
             oper="+";
             ent.value=Number(ent.value)+buf; 
             buf=Number(ent.value);
+            break;
+        default:
+            oper="+";
+            buf=Number(ent.value);
+            ent.value=" ";
             break;
      }
  }
@@ -89,13 +94,19 @@ numbers[16].addEventListener('click', ()=>{ent.value="";oper="";buf=0;});
             oper="-";
             ent.value=" "; 
             break;
-        default:
+         case "-":
             oper="-";
             ent.value=buf-Number(ent.value); 
             buf=Number(ent.value);
             break;
+        default:
+            oper="-";
+            buf=Number(ent.value);
+            ent.value=" ";
+            break;
      }
-}
+ }
+
 function mul(){
     switch (oper) {
         case "":
@@ -107,10 +118,15 @@ function mul(){
             oper="*";
             ent.value=" "; 
             break;
+         case "*":
+            oper="*";
+            ent.value=Number(ent.value)*buf; 
+            buf=Number(ent.value);
+            break;
         default:
             oper="*";
-            ent.value=buf * Number(ent.value); 
             buf=Number(ent.value);
+            ent.value=" ";
             break;
      }
 }
@@ -125,10 +141,15 @@ function div(){
             oper="/";
             ent.value=" "; 
             break;
+         case "/":
+            oper="/";
+            ent.value=buf/Number(ent.value); 
+            buf=Number(ent.value);
+            break;
         default:
             oper="/";
-            ent.value=buf / Number(ent.value); 
             buf=Number(ent.value);
+            ent.value=" ";
             break;
      }
 }

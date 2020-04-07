@@ -54,104 +54,145 @@ numbers[16].addEventListener('click', ()=>{ent.value="";oper="";buf=0;});
             buf=Number(ent.value);
             oper="=";
              break;
-         
-     
          default:
              break;
      }
  }
  function plus(){
     switch (oper) {
-        case "":
-            oper="+";
-            buf=Number(ent.value);
-            ent.value=" "; 
+        case "+":
+           buf+=Number(ent.value);
+           ent.value="";
+           oper="+";
             break;
-         case "=":
-            oper="+";
-            ent.value=" "; 
+        case "-": 
+           buf-=Number(ent.value);
+           ent.value=""; 
+           oper="+";
             break;
-         case "+":
-            oper="+";
-            ent.value=Number(ent.value)+buf; 
-            buf=Number(ent.value);
+        case "*":
+            buf*=Number(ent.value);
+            ent.value=""; 
+            oper="+"
             break;
+        case "/":
+            buf/=Number(ent.value);
+            ent.value=""; 
+            oper="+"
+            break;
+        case "=": 
+            ent.value=""; 
+            oper="+"
+            break;
+    
         default:
-            oper="+";
-            buf=Number(ent.value);
-            ent.value=" ";
-            break;
-     }
+            buf+=Number(ent.value);
+            ent.value="";
+            oper="+"
+             break;
+    }
  }
  function sub(){
     switch (oper) {
-        case "":
-            oper="-";
-            buf=Number(ent.value);
-            ent.value=" "; 
+        case "+":
+           buf+=Number(ent.value);
+           ent.value="";
+           oper="-";
             break;
-         case "=":
-            oper="-";
-            ent.value=" "; 
+        case "-": 
+           buf-=Number(ent.value);
+           ent.value=""; 
+           oper="-";
             break;
-         case "-":
-            oper="-";
-            ent.value=buf-Number(ent.value); 
-            buf=Number(ent.value);
+        case "*":
+            buf*=Number(ent.value);
+            ent.value=""; 
+            oper="-"
             break;
+        case "/":
+            buf/=Number(ent.value);
+            ent.value=""; 
+            oper="-"
+            break;
+        case "=": 
+            ent.value=""; 
+            oper="-"
+            break;
+    
         default:
-            oper="-";
-            buf=Number(ent.value);
-            ent.value=" ";
-            break;
-     }
+            buf+=Number(ent.value);
+            ent.value="";
+            oper="-"
+             break;
+    }
  }
-
 function mul(){
     switch (oper) {
-        case "":
-            oper="*";
-            buf=Number(ent.value);
-            ent.value=" "; 
+        case "+":
+           buf+=Number(ent.value);
+           ent.value="";
+           oper="*";
             break;
-         case "=":
-            oper="*";
-            ent.value=" "; 
+        case "-": 
+           buf-=Number(ent.value);
+           ent.value=""; 
+           oper="*";
             break;
-         case "*":
-            oper="*";
-            ent.value=Number(ent.value)*buf; 
-            buf=Number(ent.value);
+        case "*":
+            buf*=Number(ent.value);
+            ent.value=""; 
+            oper="*"
             break;
+        case "/":
+            buf/=Number(ent.value);
+            ent.value=""; 
+            oper="*"
+            break;
+        case "=": 
+            ent.value=""; 
+            oper="*"
+            break;
+    
         default:
-            oper="*";
-            buf=Number(ent.value);
-            ent.value=" ";
-            break;
-     }
+            buf+=Number(ent.value);
+            ent.value="";
+            oper="*"
+             break;
+    }
 }
 function div(){
     switch (oper) {
-        case "":
-            oper="/";
-            buf=Number(ent.value);
-            ent.value=" "; 
+        case "+":
+           buf+=Number(ent.value);
+           ent.value="";
+           oper="/";
             break;
-         case "=":
-            oper="/";
-            ent.value=" "; 
+        case "-": 
+           buf-=Number(ent.value);
+           ent.value=""; 
+           oper="/";
             break;
-         case "/":
-            oper="/";
-            ent.value=buf/Number(ent.value); 
-            buf=Number(ent.value);
+        case "*":
+            buf*=Number(ent.value);
+            ent.value=""; 
+            oper="/"
             break;
+        case "/":
+            buf/=Number(ent.value);
+            ent.value=""; 
+            oper="/"
+            break;
+        case "=": 
+            ent.value=""; 
+            oper="/"
+            break;
+    
         default:
-            oper="/";
-            buf=Number(ent.value);
-            ent.value=" ";
-            break;
-     }
+            buf+=Number(ent.value);
+            ent.value="";
+            oper="/"
+             break;
+    }
 }
 
 
